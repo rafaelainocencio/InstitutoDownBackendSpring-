@@ -23,7 +23,7 @@ import com.recode.institutoDown.services.EmpresaService;
 
 
 @RestController
-@RequestMapping(value = "/empresa")
+@RequestMapping(value = "/empresas")
 public class EmpresaController {
 		
 		@Autowired

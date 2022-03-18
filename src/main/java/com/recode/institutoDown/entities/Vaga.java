@@ -33,6 +33,7 @@ public class Vaga implements Serializable {
 	private List<Candidatura> candidaturas = new ArrayList<>();
 	
 	@ManyToOne
+	@JsonIgnore
 	@JoinColumn(name = "empresa_id")
 	private Empresa empresa;
 
@@ -40,7 +41,7 @@ public class Vaga implements Serializable {
 	public Vaga() {
 	}
 
-	public Vaga(Long id, String nome, String descricao, Double salario, String cargaHoraria, Empresa empresa) {
+	public Vaga(Long id, String nome, String descricao, Double salario, String cargaHoraria, Empresa empresa, List<Candidatura> candidaturas) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -48,6 +49,7 @@ public class Vaga implements Serializable {
 		this.salario = salario;
 		this.cargaHoraria = cargaHoraria;
 		this.empresa = empresa;
+		this.candidaturas = candidaturas;
 	}
 
 	public Long getId() {

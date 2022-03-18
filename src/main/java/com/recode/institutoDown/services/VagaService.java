@@ -45,9 +45,10 @@ public class VagaService {
 		result.setCargaHoraria(obj.getCargaHoraria());
 		result.setSalario(obj.getSalario());
 		result.setEmpresa(obj.getEmpresa()); // TIRAR ISSO, TALVEZ
+		
 	}
 	public Vaga fromDTO(VagaDTO objDto){
-		return new Vaga(objDto.getId(), objDto.getNome(), objDto.getDescricao(), objDto.getSalario(), objDto.getCargaHoraria(), objDto.getEmpresa());
+		return new Vaga(objDto.getId(), objDto.getNome(), objDto.getDescricao(), objDto.getSalario(), objDto.getCargaHoraria(), objDto.getEmpresa(), objDto.getCandidaturas());
 	}
 
 	@Transactional

@@ -34,21 +34,21 @@ public class CandidaturaController {
 			return service.findAll(pageable);
 		}
 
-		/*@GetMapping(value = "/{id}")
+		@GetMapping(value = "/{id}")
 		public CandidaturaDTO findById(@PathVariable Long id){
 			return service.findById(id);
 		}
 
-		/*@PostMapping
+		@PostMapping
 		public ResponseEntity<Candidatura> insert(@RequestBody Candidatura obj){
 			obj = service.insert(obj);
 			URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
 			return ResponseEntity.created(uri).body(obj);
-		}*/
+		}
 
-		/*@DeleteMapping(value = "/{id}")
+		@DeleteMapping(value = "/{id}")
 		public ResponseEntity<Void> delete(@PathVariable Long id){
 			service.delete(id);
 			return ResponseEntity.noContent().build();
-		}*/
+		}
 }	
