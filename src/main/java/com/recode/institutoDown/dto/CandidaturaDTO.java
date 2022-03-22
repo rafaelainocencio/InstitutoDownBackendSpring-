@@ -2,6 +2,8 @@ package com.recode.institutoDown.dto;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.recode.institutoDown.entities.Candidatura;
 import com.recode.institutoDown.entities.Empresa;
@@ -17,6 +19,7 @@ public class CandidaturaDTO implements Serializable {
 	private Usuario usuario;
 	
 	private Vaga vaga;
+	
 	 
 	public CandidaturaDTO() {
 	}
@@ -25,6 +28,7 @@ public class CandidaturaDTO implements Serializable {
 		this.id = id;
 		this.usuario = usuario;
 		this.vaga = vaga;
+		
 	}
 
 	public CandidaturaDTO(Candidatura candidatura) {
